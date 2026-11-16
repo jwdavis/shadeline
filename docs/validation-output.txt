@@ -1,0 +1,27 @@
+Optional-column coverage:  heat index 100% | humidity 100% | timestamp 0%
+=================================================================
+VALIDATION                        RESULT   DETAIL
+=================================================================
+heat: has rows                    PASS    19,491 rows
+heat: no null temperature         PASS    0 nulls
+heat: temp physically sane        PASS    100.9F to 110.1F
+heat: no sentinel survivors       PASS    mins: temp 100.9, heat index 102.5, humidity 18.7
+heat: humidity 0-100 or null      PASS    18.7 to 30.5
+heat: city label present          FAIL >>  19,491 null
+heat: timestamps plausible        PASS    NaT
+heat: coordinates present         PASS    lat 32.668..32.860
+heat: spatially spread            PASS    18,298 distinct points
+heat: intra-city spread > 3F      PASS    9.2F across the city
+stations: has rows                PASS    27,187 station-days
+stations: at least one station    PASS    16 station(s)
+stations: temp sane               PASS    10F to 112F
+stations: multi-year              PASS    2019-01-01 to 2025-12-31
+tracts: has rows                  PASS    618 tracts
+tracts: geo_id is 11 digits       PASS    0 malformed
+tracts: poverty rate 0-1          PASS    0 out of range
+tracts: population sane           PASS    2,756,196 people
+tracts: coordinates present       PASS    0 missing
+cross: station near traverses     PASS    nearest station 9 km from the traverse centroid
+cross: tracts overlap traverses   PASS    124 tracts inside the traverse footprint
+=================================================================
+20 of 21 checks passed
