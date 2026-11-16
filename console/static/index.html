@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shadeline</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div>
+        <h1>Shadeline</h1>
+        <p class="subtitle">Siting desk for Dallas cooling centers</p>
+      </div>
+      <button id="new-question" class="btn btn-quiet" type="button">New question</button>
+    </header>
+
+    <section class="ask">
+      <label for="question-input" class="label">Your question</label>
+      <textarea id="question-input" rows="4"
+        placeholder="Ask where cooling centers should go, check a location by latitude and longitude, or ask how often Dallas gets this hot. Give a forecast high to get temperatures for each site."></textarea>
+      <div class="ask-row">
+        <button id="ask" class="btn btn-primary" type="button">Get a recommendation</button>
+        <span class="hint">Ctrl or Cmd + Enter also sends</span>
+      </div>
+      <p class="label label-small">Or start from one of these</p>
+      <div class="starters">
+        <button id="starter-1" class="starter" type="button">Next year's budget funds two permanent cooling centers. Friday's forecast high is 105°F. Where should they go? Then draft the memo I take to the council committee.</button>
+        <button id="starter-2" class="starter" type="button">Check a point: latitude 32.806, longitude -96.753. How much hotter than the city does it run, and why?</button>
+        <button id="starter-3" class="starter" type="button">How often does Dallas reach 105°F or more? Give me days per year.</button>
+      </div>
+    </section>
+
+    <div id="empty" class="empty">
+      <p>The recommendation appears here as a briefing sheet: ranked sites, why each one runs hot,
+        who lives there, and a draft memo for the committee. Sites are census tract centers inside
+        the area the Heat Watch volunteers drove.</p>
+    </div>
+
+    <article id="brief" class="brief"></article>
+
+    <section id="steps-box" class="steps-box" hidden>
+      <h2 class="label">What the assistant ran <span id="steps-time" class="muted"></span></h2>
+      <ol id="steps" class="steps"></ol>
+    </section>
+
+    <div id="thread" class="thread"></div>
+
+    <div id="working" class="working" hidden>
+      <div class="bar"><span></span></div>
+      <p><strong>Working on it</strong> <span id="elapsed" class="muted"></span></p>
+      <p class="muted">Running the heat model on the tract centers and writing the brief.
+        This usually takes 15 to 40 seconds.</p>
+    </div>
+
+    <div id="error" class="error" role="alert" hidden></div>
+
+    <section id="followup" class="followup" hidden>
+      <label for="followup-input" class="label">Follow-up</label>
+      <div class="followup-row">
+        <input id="followup-input" type="text" autocomplete="off"
+          placeholder="Ask a follow-up, for example: What if the forecast is 108?">
+        <button id="followup-send" class="btn btn-primary" type="button">Send</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

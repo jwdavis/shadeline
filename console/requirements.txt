@@ -1,0 +1,3 @@
+# The console, on top of agent/requirements.txt (google-adk, google-cloud-bigquery).
+fastapi==0.141.1
+uvicorn==0.54.0
