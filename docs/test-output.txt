@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+collecting ... collected 7 items
+
+tests/test_tools.py::test_three_sites_follow_the_rules PASSED            [ 14%]
+tests/test_tools.py::test_same_question_same_answer PASSED               [ 28%]
+tests/test_tools.py::test_south_stays_south PASSED                       [ 42%]
+tests/test_tools.py::test_forecast_moves_only_the_expected_high PASSED   [ 57%]
+tests/test_tools.py::test_count_is_capped_and_area_is_checked PASSED     [ 71%]
+tests/test_tools.py::test_point_with_no_reading_nearby PASSED            [ 85%]
+tests/test_tools.py::test_point_outside_driven_area_is_refused PASSED    [100%]
+
+======================== 7 passed, 2 warnings in 8.90s =========================

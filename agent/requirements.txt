@@ -1,0 +1,2 @@
+google-adk[mcp]==2.7.0
+google-cloud-bigquery==3.47.0
