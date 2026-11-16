@@ -1,0 +1,20 @@
+rank  tract        latitude  longitude   offset  no vehicle  no-veh rate  poverty
+   1  48113020500   32.7834   -96.8623   +0.09F         942        45.2%    29.1%
+   2  48113020300   32.7743   -96.7668   +0.01F         423        38.5%    30.1%
+   3  48113001503   32.8029   -96.7770   +0.14F         328        30.6%    35.0%
+   4  48113002100   32.7842   -96.8029   +0.03F         326        17.9%    15.1%
+   5  48113001301   32.8061   -96.7528   +0.11F         315        20.0%    13.3%
+   6  48113001400   32.8077   -96.7617   +0.11F         297        17.1%    14.6%
+   7  48113012208   32.7997   -96.7222   +0.08F         280        25.6%    37.5%
+   8  48113001502   32.7936   -96.7692   +0.09F         264        20.4%    29.6%
+   9  48113000405   32.8135   -96.8205   +0.25F         257        19.9%    17.0%
+  10  48113001504   32.8003   -96.7737   +0.12F         244        17.9%    28.6%
+
+                              our 10 sites    Dallas
+poverty rate                         24.9%     12.6%
+households with no vehicle           25.5%      5.4%
+
+residents in our tracts             31,338
+households with no vehicle           3,676
+
+Dallas = the 615 loaded census tracts with residents, weighted by population (households for vehicles).
